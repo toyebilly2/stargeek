@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100vh;
+    grid-template-areas: "i f";
+}
+
+header{
+    grid-area: i;
+    background-image: url(img/cadastro.jpg);
+    background-size: 100%;
+}
+
+main{
+    grid-area: f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 50;
+    font-size: 20px;
+    margin-top: 80px;
+   
+}
+
+form > input[type="submit"]{
+    background-color: black;
+    color: white;
+    padding: 10px 40px;
+    margin-top: 55px;
+}
+
+form > input{
+    border-radius: 55px;
+    font-size: 2.0rem;
+}
+
+main > h1{
+    font-size: 7rem;
+}
+
+@media screen and (max-width:800px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30vh auto;
+        grid-template-areas: "i" "f";
+    } 
+    header{
+        grid-area: i;
+        background-image: url(img/cadastro.jpg);
+        background-size: 100%;
+        background-position: -50% -50%;
+    }
+}
